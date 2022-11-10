@@ -1,4 +1,61 @@
 //====================================================================================================
+.header {
+
+	&__row {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 39px 0px 0px 0px;
+	}
+
+	&__logo {}
+
+	&__button {
+		color: rgba(28, 19, 17, 1);
+		background-color: rgba(226, 162, 59, 1);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: 0em;
+		padding: 13px 42px;
+		border-radius: 5px;
+	}
+}
+
+.container {}
+
+.menu {
+
+	&__body {}
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		li {
+			margin: 0px 70px 0px 0px;
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+
+		a {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: 0em;
+			color: rgba(177, 167, 156, 1);
+
+			&.active {
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+
+	&__link {}
+}
 
 //====================================================================================================
 /*
