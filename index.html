@@ -6,7 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,35 +14,46 @@
 <body>
 	<div class="wrapper">
 <header class="header">
-	<div class="container">
+	<div class="header__container">
 		<div class="header__row">
-			<!-- 
-				html меню с иконкой бургера
-				<div class="header__menu menu">
-					<div class="menu__icon icon-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div> -->
-			<div class="header__logo">
-				<img src="img/Logo.png" alt="Logo">
+				<div class="header__logo">
+					<img src="img/Logo.png" alt="Logo">
+				</div>
+				<div class="header__content">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="#" class="menu__link active">Home</a></li>
+							<li><a href="#" class="menu__link">About</a></li>
+							<li><a href="#" class="menu__link">Discover</a></li>
+							<li><a href="#" class="menu__link">Creator</a></li>
+							<li><a href="# " class="menu__link">Collectors</a></li>
+						</ul>
+					</nav>
+					<a href="#">
+						<button class="header__button">Launch dApp</button>
+					</a>
+				</div>
+			<div class="menu__icon icon-menu">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-			<nav class="menu__body">
-				<ul class="menu__list">
-					<li><a href="#" class="menu__link active">Home</a></li>
-					<li><a href="#" class="menu__link">About</a></li>
-					<li><a href="#" class="menu__link">Discover</a></li>
-					<li><a href="#" class="menu__link">Creator</a></li>
-					<li><a href="# " class="menu__link">Collectors</a></li>
-				</ul>
-			</nav>
-			<a href="#">
-				<button class="header__button">Launch dApp</button>
-			</a>
 		</div>
 	</div>
 	</div>
-</header>		<h1>112</h1>
+</header>		<section class="mainblock">
+			<div class="mainblock__container">
+				<div class="mainblock__content">
+					<div class="mainblock__subtitle">Explorer</div>
+					<div class="mainblock__title">MIDDLE EARTH PROTOCOL</div>
+					<div class="mainblock__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa lacus ac et,
+						semper pellentesque. At eget purus eget semper elementum porttitor.</div>
+					<div class="mainblock__button">
+						<button class="mainblock__btn">View more</button>
+					</div>
+				</div>
+			</div>
+		</section>
 <footer class="footer">
 	<div class='container'>
 		<div class="footer__row">
@@ -51,11 +61,7 @@
 		</div>
 	</div>
 </footer>	</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
-<script src="js/vendors.js"></script>
-<script src="js/main.js"></script>
-<script src="js/custom.js" ></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
