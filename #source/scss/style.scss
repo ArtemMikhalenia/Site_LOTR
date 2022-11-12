@@ -33,6 +33,7 @@ $md4: 479.98;
 @import "null.scss";
 
 body {
+	height: 100%;
 	background-color: rgba(0, 0, 0, 1);
 	color: rgba(233, 222, 195, 1);
 	font-size: 14px;
@@ -47,8 +48,12 @@ body {
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
 	width: 100%;
-	min-height: 100%;
+	min-height: 100vh;
 	overflow: hidden;
+	//position: relative;
+	//min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 
 	&.loaded {}
 }
@@ -87,32 +92,48 @@ body {
 @import "footer.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
-//<MAINBLOCK>====================================================================================================
-.background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: -1;
+.ibg {
+	background-position: center;
 	background-size: cover;
-	background: linear-gradient(180deg, #000000 0%, rgba(37, 43, 66, 0.01) 88.5%);
-
-	img {
-		width: 100%;
-	}
+	background-repeat: no-repeat;
+	object-fit: cover;
 }
 
+
+//<MAINBLOCK>====================================================================================================
+
 .mainblock {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	padding: 234px 0px 0px 0px;
 
 	&__container {
-		max-width: 1240px;
+		width: 100%;
 		margin: 0 auto;
 	}
 
+	.background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+
 	&__content {
-		max-width: 900px;
-		margin: 0px 5px;
+		max-width: 1240px;
+		height: 100%;
+		margin: 0px auto;
+		padding: 0px 5px;
+		position: relative;
+
+		@media (max-width: $md4+px) {
+			padding: 0px 15px;
+		}
 	}
 
 	&__subtitle {
@@ -123,6 +144,10 @@ body {
 		letter-spacing: 0em;
 		text-align: left;
 		color: rgba(255, 255, 255, 1);
+
+		@media (max-width: $md4+px) {
+			font-size: 28px;
+		}
 	}
 
 	&__title {
@@ -134,6 +159,11 @@ body {
 		text-align: left;
 		color: rgba(226, 162, 59, 1);
 		margin: 0px 0px 14px 0px;
+
+		@media (max-width: $md4+px) {
+			font-size: 40px;
+			line-height: 60px;
+		}
 	}
 
 	&__text {
@@ -145,6 +175,11 @@ body {
 		text-align: left;
 		color: rgba(233, 222, 195, 1);
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width: $md4+px) {
+			font-size: 18px;
+			line-height: 28px;
+		}
 	}
 
 	&__button {}
@@ -159,8 +194,233 @@ body {
 		padding: 13px 56px;
 		border-radius: 5px;
 		background-color: rgba(233, 222, 195, 1);
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: rgba(226, 162, 59, 1);
+			color: white;
+		}
 	}
 }
 
-
 //</MAINBLOCK>====================================================================================================
+//<SPONSORS>====================================================================================================
+
+.spons {
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+
+	&__text {
+		font-size: 56px;
+		color: rgb(0, 0, 0);
+		z-index: 32423;
+	}
+
+	&__container {}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 131px 0px 93px 0px;
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+//</SPONSORS>====================================================================================================
+//<METAVERSE>====================================================================================================
+
+.metaverse {
+	background-color: rgba(21, 24, 31, 1);
+
+	&__container {
+		max-width: 1240px;
+		margin: 0 auto;
+	}
+
+	&__content {
+		margin: 0px 5px;
+	}
+
+	&__title {
+		position: relative;
+		font-family: Playfair Display;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 80px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(226, 162, 59, 1);
+		padding: 93px 0px 40px 0px;
+		margin: 0px 0px 71px 0px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			background: url('../img/title_decor.png') 50% no-repeat;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px 0px 156px 0px;
+		gap: 20px;
+
+		@media (max-width: $md1+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		max-width: 251px;
+		display: flex;
+		flex: 0 1 25%;
+	}
+}
+
+.item-metaverse {
+
+	&__body {
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 5px;
+		border: 2px solid #A06930;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__icon {
+		margin: 58.7px 0px 42px 0px;
+	}
+
+	&__content {
+		width: 213px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin: 0px 10px 25px 10px;
+	}
+
+	&__title {
+		font-family: Playfair Display;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 32px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: rgba(226, 162, 59, 1);
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__text {
+		line-height: 23px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(233, 222, 195, 1);
+	}
+}
+
+//</METAVERSE>====================================================================================================
+//<IPSUM>====================================================================================================
+
+.ipsum {
+
+	&__container {
+		max-width: 1240px;
+		margin: 0 auto;
+	}
+
+	&__content {
+		padding: 179px 0px 0px 0px;
+		margin: 0px 10px 0px 10px;
+	}
+
+	&__rows {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__row {
+		margin: 0px 0px 140px 0px;
+	}
+
+	&__columns {
+		display: flex;
+	}
+
+	&__column {
+		flex: 1 1 50%;
+	}
+}
+
+.column-ipsum {
+
+	&__content {
+		max-width: 513px;
+	}
+
+	&__title {
+		font-family: Playfair Display;
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 67px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: rgba(226, 162, 59, 1);
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__images {
+		//display: flex;
+	}
+
+	&__button {}
+
+	&__btn {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+		padding: 13px 63px;
+		color: rgba(28, 19, 17, 1);
+		border-radius: 5px;
+		background-color: rgba(226, 162, 59, 1);
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: rgba(177, 167, 156, 1);
+			color: white;
+		}
+	}
+}
+
+.rev {}
+
+
+//</IPSUM>====================================================================================================
