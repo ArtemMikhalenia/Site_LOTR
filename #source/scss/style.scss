@@ -195,6 +195,7 @@ body {
 		border-radius: 5px;
 		background-color: rgba(233, 222, 195, 1);
 		transition: all 0.3s ease 0s;
+		margin: 0px 0px 280px 0px;
 
 		&:hover {
 			background-color: rgba(226, 162, 59, 1);
@@ -363,6 +364,10 @@ body {
 
 	&__columns {
 		display: flex;
+
+		@media (max-width: $md2+px) {
+			display: block;
+		}
 	}
 
 	&__column {
@@ -371,6 +376,12 @@ body {
 }
 
 .column-ipsum {
+	position: relative;
+
+	@media (max-width: $md2+px) {
+		height: 397px;
+	}
+
 
 	&__content {
 		max-width: 513px;
@@ -395,9 +406,7 @@ body {
 		margin: 0px 0px 20px 0px;
 	}
 
-	&__images {
-		//display: flex;
-	}
+	&__images {}
 
 	&__button {}
 
@@ -420,7 +429,79 @@ body {
 	}
 }
 
-.rev {}
+.image-ipsum {
+	width: 100%;
+}
+
+.image-ipsum1 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+
+	img {
+		max-width: 231px;
+		width: 100%;
+	}
+}
+
+.image-ipsum2 {
+	position: absolute;
+	top: 190px;
+	left: 240px;
+
+	img {
+		max-width: 146px;
+		width: 100%;
+	}
+}
+
+.image-ipsum3 {
+	position: absolute;
+	top: -60px;
+	right: 40px;
+
+	img {
+		max-width: 231px;
+		width: 100%;
+	}
+}
+
+.image-ipsum1rev {
+	position: absolute;
+	top: -10px;
+	left: -15px;
+
+	img {
+		max-width: 231px;
+		width: 100%;
+	}
+}
+
+.image-ipsum2rev {
+	position: absolute;
+	top: 80px;
+	right: 185px;
+
+	img {
+		max-width: 231px;
+		width: 100%;
+	}
+}
+
+.image-ipsum3rev {
+	position: absolute;
+	top: -10px;
+	right: -30px;
+
+	img {
+		max-width: 231px;
+		width: 100%;
+	}
+}
+
+.contentrev {
+	margin: 0px 0px 0px 80px;
+}
 
 
 //</IPSUM>====================================================================================================

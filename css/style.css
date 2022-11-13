@@ -1120,6 +1120,7 @@ body.ie .ibg img {
 	-webkit-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
+	margin: 0px 0px 280px 0px;
 }
 .mainblock__btn:hover {
 	background-color: rgb(226, 162, 59);
@@ -1297,12 +1298,25 @@ body.ie .ibg img {
 	display: -ms-flexbox;
 	display: flex;
 }
+@media (max-width: 991.98px) {
+	.ipsum__columns {
+		display: block;
+	}
+}
 .ipsum__column {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 1 50%;
 	        flex: 1 1 50%;
 }
 
+.column-ipsum {
+	position: relative;
+}
+@media (max-width: 991.98px) {
+	.column-ipsum {
+		height: 397px;
+	}
+}
 .column-ipsum__content {
 	max-width: 513px;
 }
@@ -1340,4 +1354,72 @@ body.ie .ibg img {
 .column-ipsum__btn:hover {
 	background-color: rgb(177, 167, 156);
 	color: white;
+}
+
+.image-ipsum {
+	width: 100%;
+}
+
+.image-ipsum1 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.image-ipsum1 img {
+	max-width: 231px;
+	width: 100%;
+}
+
+.image-ipsum2 {
+	position: absolute;
+	top: 190px;
+	left: 240px;
+}
+.image-ipsum2 img {
+	max-width: 146px;
+	width: 100%;
+}
+
+.image-ipsum3 {
+	position: absolute;
+	top: -60px;
+	right: 40px;
+}
+.image-ipsum3 img {
+	max-width: 231px;
+	width: 100%;
+}
+
+.image-ipsum1rev {
+	position: absolute;
+	top: -10px;
+	left: -15px;
+}
+.image-ipsum1rev img {
+	max-width: 231px;
+	width: 100%;
+}
+
+.image-ipsum2rev {
+	position: absolute;
+	top: 80px;
+	right: 185px;
+}
+.image-ipsum2rev img {
+	max-width: 231px;
+	width: 100%;
+}
+
+.image-ipsum3rev {
+	position: absolute;
+	top: -10px;
+	right: -30px;
+}
+.image-ipsum3rev img {
+	max-width: 231px;
+	width: 100%;
+}
+
+.contentrev {
+	margin: 0px 0px 0px 80px;
 }
