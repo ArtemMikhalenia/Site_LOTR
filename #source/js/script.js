@@ -18,3 +18,15 @@ function mainblock() {
 	$('.mainblock').css('min-height', h);
 }
 mainblock();
+
+//placeholder
+const forma = document.forms.formb;
+const formInput = forma.emailform;
+const placeholder = document.querySelectorAll('[placeholder]');
+const formPlaceholder = formInput.placeholder;
+
+placeholder.forEach(el =>
+	el.addEventListener("focus", function (element) {
+		el.placeholder = "";
+	})
+);
