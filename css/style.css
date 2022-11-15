@@ -1650,6 +1650,11 @@ body.ie .ibg img {
 	max-width: 631px;
 	margin: 0px 10px 0px 0px;
 }
+@media (max-width: 991.98px) {
+	.column-token__content {
+		margin: 0px 0px 0px 0px;
+	}
+}
 .column-token__title {
 	font-family: Playfair Display;
 	font-size: 50px;
@@ -1773,6 +1778,8 @@ body.ie .ibg img {
 .formblock__container {
 	max-width: 1240px;
 	margin: 0 auto;
+}
+.formblock__body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1783,10 +1790,26 @@ body.ie .ibg img {
 	-webkit-box-align: end;
 	    -ms-flex-align: end;
 	        align-items: flex-end;
+	margin: 0px 10px 0px 10px;
+	padding: 145px 0px 140px 0px;
+}
+@media (max-width: 1252px) {
+	.formblock__body {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
 }
 .formblock__content {
-	padding: 145px 0px 140px 0px;
 	max-width: 475px;
+}
+@media (max-width: 520px) {
+	.formblock__content {
+		text-align: center;
+	}
 }
 .formblock__title {
 	font-family: Playfair Display;
@@ -1802,18 +1825,32 @@ body.ie .ibg img {
 	display: -ms-flexbox;
 	display: flex;
 }
+@media (max-width: 520px) {
+	.formblock__form {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
 
 input[type=email] {
 	color: rgb(186, 186, 188);
 }
 
 .emailform__input {
+	max-width: 310px;
 	border-radius: 5px;
 	padding: 13px 66px 13px 66px;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0em;
 	background-color: rgb(233, 222, 195);
+}
+@media (max-width: 520px) {
+	.emailform__input {
+		margin: 0px 0px 10px 0px;
+	}
 }
 
 .form__button {
@@ -1832,4 +1869,220 @@ input[type=email] {
 .form__button:hover {
 	background-color: rgb(194, 140, 53);
 	color: white;
+}
+
+.map {
+	background-color: rgb(21, 24, 31);
+}
+.map__container {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+.map__body {
+	margin: 83px 10px 50px 10px;
+}
+@media (max-width: 991.98px) {
+	.map__body {
+		margin: 53px 10px 50px 10px;
+	}
+}
+.map__columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin: 0px 0px 60px 0px;
+}
+@media (max-width: 991.98px) {
+	.map__columns {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+.map__column {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 50%;
+	        flex: 0 1 50%;
+}
+.map__text {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: rgb(233, 222, 195);
+	margin: 0px 0px 57px 0px;
+}
+@media (max-width: 991.98px) {
+	.map__text {
+		text-align: center;
+	}
+}
+@media (max-width: 479.98px) {
+	.map__text {
+		font-size: 20px;
+	}
+}
+.map__icons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: start;
+}
+@media (max-width: 991.98px) {
+	.map__icons {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+}
+.map__icon {
+	margin: 0px 28px 0px 0px;
+}
+.map__icon:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.map__icon:hover {
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	-webkit-transform: scale(1.3);
+	    -ms-transform: scale(1.3);
+	        transform: scale(1.3);
+}
+@media (max-width: 479.98px) {
+	.map__icon {
+		margin: 0px 22px 0px 0px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.column-map__content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 0px 0px 40px 0px;
+	}
+}
+.column-map__logo {
+	margin: 0px 0px 30px 0px;
+}
+.column-map__logo img {
+	-webkit-animation: rotate 10s linear infinite;
+	        animation: rotate 10s linear infinite;
+}
+.column-map__text {
+	max-width: 370px;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: rgb(233, 222, 195);
+}
+@media (max-width: 767.98px) {
+	.column-map__text {
+		max-width: 100%;
+	}
+}
+@media (max-width: 479.98px) {
+	.column-map__text {
+		font-size: 18px;
+	}
+}
+.column-map__items {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+	.column-map__items {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+}
+@media (max-width: 767.98px) {
+	.column-map__items {
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+}
+@media (max-width: 479.98px) {
+	.column-map__items {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+@media (max-width: 991.98px) {
+	.column-map__item {
+		margin: 0px 80px 0px 0px;
+	}
+	.column-map__item:last-child {
+		margin: 0px 0px 0px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.column-map__item {
+		margin: 0px 0px 0px 0px;
+	}
+}
+@media (max-width: 479.98px) {
+	.column-map__item {
+		margin: 0px 0px 40px 0px;
+	}
+}
+
+.item-map__title {
+	font-family: Playfair Display;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: rgb(226, 162, 59);
+	margin: 0px 0px 25px 0px;
+}
+@media (max-width: 479.98px) {
+	.item-map__title {
+		font-size: 26px;
+	}
+}
+.item-map__link {
+	margin: 0px 0px 20px 0px;
+}
+.item-map__link:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.item-map__link a {
+	font-size: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: rgb(233, 222, 195);
+}
+.item-map__link a:hover {
+	text-decoration: underline;
+}
+@media (max-width: 479.98px) {
+	.item-map__link a {
+		font-size: 19px;
+	}
 }

@@ -20,13 +20,17 @@ function mainblock() {
 mainblock();
 
 //placeholder
-const forma = document.forms.formb;
-const formInput = forma.emailform;
-const placeholder = document.querySelectorAll('[placeholder]');
-const formPlaceholder = formInput.placeholder;
+let forma = document.forms.formb;
+let formInput = forma.emailform;
+let placeholder = document.querySelectorAll('[placeholder]');
+let formPlaceholder = formInput.placeholder;
 
 placeholder.forEach(el =>
 	el.addEventListener("focus", function (element) {
 		el.placeholder = "";
 	})
 );
+placeholder.forEach(el =>
+	el.addEventListener("blur", function (element) {
+		formInput.placeholder = placeholder.value = "hola@gmail.com";
+	}));
