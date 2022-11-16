@@ -44,8 +44,22 @@
 	}
 
 	&__logo {
+		display: inline-block;
 		z-index: 80;
 		animation: rotate 10s linear infinite;
+	}
+
+	.logo {
+		transform: translate(-120%, 0px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__button {
@@ -67,6 +81,19 @@
 
 	&__btn {
 		padding: 0px 0px 0px 20px;
+
+		@media (min-width: $md3+px) {
+			transform: translate(50%, 0px);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 1s ease 0s;
+
+			&.active {
+				visibility: visible;
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -167,6 +194,17 @@
 
 .icon-menu {
 	display: none;
+
+	transform: translate(120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 @media (max-width: $md3+px) {
@@ -200,7 +238,7 @@
 			}
 		}
 
-		&.active {
+		&._active {
 			span {
 				@include scale(0);
 

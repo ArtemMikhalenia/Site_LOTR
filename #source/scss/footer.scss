@@ -3,6 +3,7 @@
    background-color: rgba(18, 19, 20, 1);
 
    &__row {
+      display: inline-block;
       font-size: 16px;
       font-weight: 500;
       line-height: 24px;
@@ -11,12 +12,23 @@
       color: rgba(145, 144, 148, 1);
       padding: 50px 0px 50px 105px;
 
+      transform: translate(0px, 50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s ease 0s;
+
+      &.active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         visibility: visible;
+      }
+
       @media (max-width: 600px) {
          padding: 50px 10px 50px 10px;
          text-align: center;
       }
 
-      @media (max-width: $md4+px){
+      @media (max-width: $md4+px) {
          padding: 20px 10px 20px 10px;
       }
    }

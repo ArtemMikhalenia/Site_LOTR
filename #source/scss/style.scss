@@ -50,8 +50,7 @@ body {
 	width: 100%;
 	min-height: 100vh;
 	overflow: hidden;
-	//position: relative;
-	//min-height: 100vh;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 
@@ -148,6 +147,17 @@ body {
 		@media (max-width: $md4+px) {
 			font-size: 28px;
 		}
+
+		transform: translate(0px, -120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__title {
@@ -163,6 +173,17 @@ body {
 		@media (max-width: $md4+px) {
 			font-size: 40px;
 			line-height: 60px;
+		}
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			visibility: visible;
+			opacity: 1;
 		}
 	}
 
@@ -180,9 +201,31 @@ body {
 			font-size: 18px;
 			line-height: 28px;
 		}
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.3s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
-	&__button {}
+	&__button {
+		transform: translate(-120%, 0px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.4s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 
 	&__btn {
 		font-size: 16px;
@@ -219,6 +262,58 @@ body {
 
 	&__container {}
 
+	&__img1 {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__img2 {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.2s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__img3 {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.2s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__img4 {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
 	&__content {
 		display: flex;
 		align-items: center;
@@ -236,6 +331,7 @@ body {
 		}
 	}
 }
+
 
 //</SPONSORS>====================================================================================================
 //<METAVERSE>====================================================================================================
@@ -263,6 +359,17 @@ body {
 		color: rgba(226, 162, 59, 1);
 		padding: 93px 0px 40px 0px;
 		margin: 0px 0px 71px 0px;
+
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
 
 		&:after {
 			content: '';
@@ -337,6 +444,215 @@ body {
 		color: rgba(233, 222, 195, 1);
 	}
 }
+
+._item-metaverse1 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._item-metaverse2 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.2s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._item-metaverse3 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.4s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._item-metaverse4 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.6s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.item-metaverse__icon1 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.6s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.item-metaverse__icon2 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.8s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.item-metaverse__icon3 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.item-metaverse__icon4 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1.2s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._title1 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.6s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._text1 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.6s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._title2 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.8s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._text2 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 0.8s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._title3 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._text3 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._title4 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1.2s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._text4 {
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease 1.2s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 
 //</METAVERSE>====================================================================================================
 //<IPSUM>====================================================================================================
@@ -430,6 +746,17 @@ body {
 			font-size: 40px;
 			line-height: 47px;
 		}
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__text {
@@ -438,13 +765,37 @@ body {
 		letter-spacing: 0em;
 		text-align: left;
 		margin: 0px 0px 20px 0px;
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.4s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__images {}
 
-	&__button {}
+	&__button1 {
+		display: inline-block;
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.8s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 
 	&__btn {
+
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 24px;
@@ -488,6 +839,17 @@ body {
 	top: 20px;
 	left: 0;
 
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+
 	@media (max-width: $md2+px) {
 		position: static;
 	}
@@ -502,6 +864,17 @@ body {
 	position: absolute;
 	top: 190px;
 	left: 240px;
+
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
 
 	@media (max-width: $md2+px) {
 		position: static;
@@ -522,6 +895,17 @@ body {
 	position: absolute;
 	top: -60px;
 	right: 40px;
+
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
 
 	@media (max-width: $md2+px) {
 		position: static;
@@ -553,6 +937,17 @@ body {
 	top: -10px;
 	left: -15px;
 
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+
 	@media (max-width: $md2+px) {
 		position: static;
 	}
@@ -568,6 +963,17 @@ body {
 	top: 80px;
 	right: 185px;
 
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.2s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+
 	@media (max-width: $md2+px) {
 		position: static;
 	}
@@ -582,6 +988,17 @@ body {
 	position: absolute;
 	top: -10px;
 	right: -30px;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
 
 	@media (max-width: $md2+px) {
 		position: static;
@@ -694,6 +1111,17 @@ body {
 		text-align: left;
 		color: rgba(226, 162, 59, 1);
 		margin: 0px 0px 20px 0px;
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__text {
@@ -705,6 +1133,17 @@ body {
 		text-align: left;
 		color: rgba(233, 222, 195, 1);
 		padding: 0px 0px 0px 5px;
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.3s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 
 		@media (max-width: $md2+px) {
 			padding: 10px;
@@ -742,6 +1181,17 @@ body {
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
+
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
 
 		@media (max-width: $md2+px) {
 			width: 100%;
@@ -837,10 +1287,32 @@ body {
 		letter-spacing: 0em;
 		color: rgba(226, 162, 59, 1);
 		margin: 0px 0px 35px 0px;
+
+		transform: translate(120%, 0px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__form {
 		display: flex;
+
+		transform: translate(-120%, 0px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 
 		@media (max-width: 520px) {
 			flex-direction: column;
@@ -938,6 +1410,17 @@ input[type='email'] {
 		color: rgba(233, 222, 195, 1);
 		margin: 0px 0px 57px 0px;
 
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0.2s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
+
 		@media (max-width: $md2+px) {
 			text-align: center;
 		}
@@ -986,10 +1469,24 @@ input[type='email'] {
 	}
 
 	&__logo {
+		display: inline-block;
 		margin: 0px 0px 30px 0px;
 
 		img {
 			animation: rotate 10s linear infinite;
+		}
+	}
+
+	&__logoanim {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 
@@ -1000,6 +1497,17 @@ input[type='email'] {
 		letter-spacing: 0em;
 		text-align: left;
 		color: rgba(233, 222, 195, 1);
+
+		transform: translate(0px, 120%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
 
 		@media (max-width: $md3+px) {
 			max-width: 100%;
@@ -1059,6 +1567,17 @@ input[type='email'] {
 		color: rgba(226, 162, 59, 1);
 		margin: 0px 0px 25px 0px;
 
+		transform: translate(-120%, 0px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+			visibility: visible;
+		}
+
 		@media (max-width: $md4+px) {
 			font-size: 26px;
 		}
@@ -1088,7 +1607,124 @@ input[type='email'] {
 	}
 }
 
-.map-link {}
+.map-link1 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.2s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.map-link2 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.4s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.map-link3 {
+	transform: translate(-120%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.6s;
+
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+.icon1 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.icon2 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.2s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.icon3 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.4s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.icon4 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.6s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.icon5 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0.8s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.icon6 {
+	transform: scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 1s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 
 
 //</MAP>====================================================================================================
