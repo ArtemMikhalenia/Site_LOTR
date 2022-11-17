@@ -1070,15 +1070,21 @@ body.ie .ibg img {
 .footer {
 	background-color: rgb(18, 19, 20);
 }
+.footer__container {
+	max-width: 1240px;
+	margin: 0 auto;
+}
 .footer__row {
 	display: inline-block;
+	width: 100%;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
 	letter-spacing: 0em;
 	text-align: left;
 	color: rgb(145, 144, 148);
-	padding: 50px 0px 50px 105px;
+	padding: 50px 0px 50px 0px;
+	margin: 0px 0px 0px 10px;
 	-webkit-transform: translate(0px, 50%);
 	    -ms-transform: translate(0px, 50%);
 	        transform: translate(0px, 50%);
@@ -1095,15 +1101,22 @@ body.ie .ibg img {
 	opacity: 1;
 	visibility: visible;
 }
+@media (max-width: 991.98px) {
+	.footer__row {
+		text-align: center;
+	}
+}
 @media (max-width: 600px) {
 	.footer__row {
-		padding: 50px 10px 50px 10px;
+		padding: 50px 10px 50px 0px;
+		margin: 0px 0px 0px 10px;
 		text-align: center;
 	}
 }
 @media (max-width: 479.98px) {
 	.footer__row {
-		padding: 20px 10px 20px 10px;
+		padding: 20px 10px 20px 0px;
+		margin: 0px 0px 0px 10px;
 	}
 }
 

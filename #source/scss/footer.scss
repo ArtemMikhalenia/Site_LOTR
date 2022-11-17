@@ -2,15 +2,22 @@
 .footer {
    background-color: rgba(18, 19, 20, 1);
 
+   &__container {
+      max-width: 1240px;
+      margin: 0 auto;
+   }
+
    &__row {
       display: inline-block;
+      width: 100%;
       font-size: 16px;
       font-weight: 500;
       line-height: 24px;
       letter-spacing: 0em;
       text-align: left;
       color: rgba(145, 144, 148, 1);
-      padding: 50px 0px 50px 105px;
+      padding: 50px 0px 50px 0px;
+      margin: 0px 0px 0px 10px;
 
       transform: translate(0px, 50%);
       opacity: 0;
@@ -23,13 +30,19 @@
          visibility: visible;
       }
 
+      @media (max-width: $md2+px) {
+         text-align: center;
+      }
+
       @media (max-width: 600px) {
-         padding: 50px 10px 50px 10px;
+         padding: 50px 10px 50px 0px;
+         margin: 0px 0px 0px 10px;
          text-align: center;
       }
 
       @media (max-width: $md4+px) {
-         padding: 20px 10px 20px 10px;
+         padding: 20px 10px 20px 0px;
+         margin: 0px 0px 0px 10px;
       }
    }
 }
