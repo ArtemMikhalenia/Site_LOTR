@@ -2078,12 +2078,11 @@ body.ie .ibg img {
 	}
 }
 .image-ipsum2 img {
-	max-width: 146px;
-	width: 100%;
+	width: 146px;
 }
 @media (max-width: 991.98px) {
 	.image-ipsum2 img {
-		max-width: 231px;
+		width: 231px;
 		height: 231px;
 	}
 }

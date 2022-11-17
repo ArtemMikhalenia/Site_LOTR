@@ -881,11 +881,10 @@ body {
 	}
 
 	img {
-		max-width: 146px;
-		width: 100%;
+		width: 146px;
 
 		@media (max-width: $md2+px) {
-			max-width: 231px;
+			width: 231px;
 			height: 231px;
 		}
 	}
